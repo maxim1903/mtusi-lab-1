@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<form action="index" method="post">
+    <p><b>Поле для ввода</b></p>
+    <p><textarea class="form-control" id="exampleTextarea" rows="3" name="text"></textarea></p>
+    <p><input type="submit" class="btn btn-primary btn-lg"> </p>
+      </form>
+{% for post in posts %}
+    <div class="alert alert-dismissible alert-success">
+    <strong>{{post.message}}</strong>
+    </div>
+{% endfor %}
+</body>
+</html>
